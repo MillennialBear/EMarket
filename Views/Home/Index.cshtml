@@ -1,0 +1,142 @@
+﻿@model HomeViewModel
+
+<div class="nopadding">
+	<div id="demo" class="carousel slide" data-bs-ride="carousel">		
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+			<button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+		</div>		
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="12000">				
+				<div class="fav-bg" style="background:url('img/carousel/touch_background_carousel.jpg') center center no-repeat">					
+					@Html.Partial("FavMonitor", Model.FavMonitors[0])
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="12000">
+				<div class="fav-bg" style="background:url('img/carousel/lfd_background_carousel.jpg') center center no-repeat">
+					@Html.Partial("FavMonitor", Model.FavMonitors[2])
+				</div>
+			</div>
+			<div class="carousel-item" data-bs-interval="12000">
+				<div class="fav-bg" style="background:url('img/carousel/desktop_background_carousel.jpg') center center no-repeat">
+					@Html.Partial("FavMonitor", Model.FavMonitors[1])
+				</div>
+			</div>
+			
+			<div class="carousel-item" data-bs-interval="12000">
+				<div class="fav-bg" style="background:url('img/carousel/gaming_background_carousel.jpg') center center no-repeat">
+					@Html.Partial("FavMonitor", Model.FavMonitors[3])
+				</div>
+			</div>
+		</div>		
+		<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</button>
+	</div>
+</div>
+<section>
+	<div class="container category-home-box">
+		<div class="row">
+			<div class="col-md-11 offset-md-1">				
+				<div class="row">
+					<div class="col-md-2 col-overlay orange-mod text-white nopadding">
+						<a href="/Monitors/List/desktop">
+						<div class="bg-cover home-box-item background-layer-1 nopadding">
+							<div class="overlay orange-mod">
+								<span class="icon-bg bg-contain" style="background:url('/img/nav_img/icon-desktop.png') center center no-repeat"></span>
+								<div class="text-home-box">DESKTOP MONITORS</div>	
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-md-2 offset-md-1 col-overlay blue-mod text-white nopadding">
+						<a href="/Monitors/List/touchscreen">
+						<div class="bg-cover home-box-item background-layer-2 nopadding">
+							<div class="overlay blue-mod">
+								<span class="icon-bg bg-contain" style="background:url('/img/nav_img/icon-touchscreen.png') center center no-repeat"></span>
+								<div class="text-home-box">TOUCHSCREEN</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-md-2 offset-md-1 col-overlay grey-mod text-white nopadding">
+						<a href="/Monitors/List/lfd">
+						<div class="bg-cover home-box-item background-layer-3 nopadding">
+							<div class="overlay grey-mod">
+								<span class="icon-bg bg-contain" style="background:url('/img/nav_img/icon-lfd.png') center center no-repeat"></span>
+								<div class="text-home-box">LARGE FORMAT DISPLAYS</div>
+							</div>
+						</div>
+						</a>
+					</div>
+					<div class="col-md-2 offset-md-1 col-overlay dark-mod text-white nopadding">
+						<a href="/Monitors/List/gaming">
+						<div class="bg-cover home-box-item background-layer-4 nopadding">
+							<div class="overlay dark-mod">
+								<span class="icon-bg bg-contain" style="background:url('/img/nav_img/icon-gaming.png') center center no-repeat"></span>
+								<div class="text-home-box">GAMING</div>	
+							</div>
+						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>	
+<section>
+	<div class="container support-home-box">
+		<div class="row">
+			<div class="col-md-11 offset-md-1">				
+				<div class="row">
+					<div class="col-md-8 clearfix hidden-xs support-icons nopadding">
+						<div class="s-bg">
+					<a class="item" href="/Home/support/#customer-servicef"><span class="icon transition-all" style="background: url('/img/support/icon-cservice.png') center center no-repeat"></span>
+					<span class="txt transition-all" title="Service">Service</span></a>
+					<a class="item" href="/Home/support/#warrantyf"><span class="icon transition-all" style="background: url(/img/support/icon-warranty.png) center center no-repeat"></span>
+					<span class="txt transition-all" title="Warranty">Warranty</span></a>
+					<a class="item" href="/Home/support/#faqf"><span class="icon transition-all" style="background: url(/img/support/icon-faq.png) center center no-repeat"></span>
+					<span class="txt transition-all" title="FAQ">FAQ</span></a>
+					<a class="item" href="/Home/support/#downloadsf"><span class="icon transition-all" style="background: url(/img/support/icon-download.png) center center no-repeat"></span>
+					<span class="txt transition-all" title="Downloads">Downloads</span></a>
+					<a class="item" href="/Home/support/#cleaningf"><span class="icon transition-all" style="background: url(/img/support/icon-cleaning.png) center center no-repeat"></span>
+					<span class="txt transition-all" title="cleaning">cleaning</span></a>
+				</div>						
+					</div>					
+					<div class="col-md-1 offset-md-1 social-fb-area nopadding">
+						<a href="http://www.facebook.com/iiyamaCo" title="Facebook group iiayma" target="blank">
+							<span class="icon-logo" style="background:url('/img/logo/icon-fb.png') center center no-repeat"></span>
+						</a>
+					</div>
+					<div class="col-md-1 social-tweeter-area nopadding">
+						<a href="https://twitter.com/iiyamaCo" title="Twitter account iiayma" target="blank">
+						<span class="icon-logo" style="background:url('/img/logo/icon-tweeter.png') center center no-repeat"></span>
+						</a>
+					</div>
+					<div class="col-md-8 support-text nopadding">
+						<a href="Home/support">
+							<div id="link-support-page">
+								<h3 class="mt-2">Support</h3>
+								<p>Need help? Got a question? Here you’ll find files to download.</p>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-2 offset-md-1 social-yt-area nopadding">
+						<a href="https://www.youtube.com/channel/UCrwjAdOelaYVE6AQ1d_igrA" title="YouTube account iiayma" target="blank">
+						<span class="icon-logo-yt" style="background:url('/img/logo/yt.png') center center no-repeat"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+
+
+

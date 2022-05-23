@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link rel="icon" type="image/x-icon" href="~/img/ico/favicon.ico">
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="~/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
+        <link href="~/css/GlobalStyles.css" rel="stylesheet" type="text/css"/>
+        <link href="~/css/LayoutStyles.css" rel="stylesheet" type="text/css"/> 
+        <link href="~/css/HomePageStyles.css" rel="stylesheet" type="text/css"/> 
+        <link href="~/css/AdminPanelPageStyles.css" rel="stylesheet" type="text/css"/>                
+        <link href="~/css/PageListMonitorsStyles.css" rel="stylesheet" type="text/css"/> 
+        <link href="~/css/PageSingleMonitorStyles.css" rel="stylesheet" type="text/css"/> 
+        <link href="~/css/ShopCartStyles.css" rel="stylesheet" type="text/css"/> 
+        <link href="~/css/SupportPageStyles.css" rel="stylesheet" type="text/css"/>
+        <link href="~/css/PressPageStyles.css" rel="stylesheet" type="text/css"/>
+        <link href="~/css/PrivacyPolicyPageStyles.css" rel="stylesheet" type="text/css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>        
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>        
+        <script>
+            $('.dropdown-toggle').click(function(e) {
+                if ($(document).width() > 768) {
+                    e.preventDefault();
+                    var url = $(this).attr('href'); 
+                    if (url !== '#') { 
+                        window.location.href = url;
+                    }
+                }
+            });
+        </script>
+        <script type="text/javascript">
+            function toggle_show(id) {
+                document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+            }
+        </script>
+    </head>
+<body>    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"> 
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index" asp-route-area="">
+                <img src=~/img/ico/logo-iiyama.png alt="iiyama">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/Monitors/List/">All monitors</a>
+                            <a class="dropdown-item" href="/Monitors/List/touchscreen">Touchscreen</a>
+                            <a class="dropdown-item" href="/Monitors/List/desktop">Desktop</a>
+                            <a class="dropdown-item" href="/Monitors/List/lfd">LFD</a>
+                            <a class="dropdown-item" href="/Monitors/List/gaming">Gaming</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/Home/support/#warrantyf">Standard Warranty</a>
+                            <a class="dropdown-item" href="/Home/support/#customer-servicef">Customer Service</a>
+                            <a class="dropdown-item" href="/Home/support/#downloadsf">Downloads</a>                            
+                            <a class="dropdown-item" href="/Home/support/#recyclingf">Recycling</a>
+                            <a class="dropdown-item" href="/Home/support/#faqf">F.A.Q</a>                                                   
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" asp-controller="ShopCart" asp-action="Index" asp-route-area="">Shop cart</a>
+                        </div>
+                    </li>
+                </ul>
+                <form asp-controller="Monitors" asp-action="List" method="get" class="d-flex search-form-box">
+                    <input class="form-control me-2" type="search" placeholder="Search" name="searchString" aria-label="Search">
+                    <button class="btn btn-outline-primary custom-btn-outline-primary" type="submit">Search</button>
+                </form>                
+            </div>
+        </div>
+    </nav>      
+    <main>
+        <div class="nopadding">
+            @if (TempData["message"] != null)
+            {
+                <div class="alert alert-success">@TempData["message"]</div>
+            }
+            @RenderBody()
+        </div>
+    </main>
+    <div class="container-fluid bg-footer">
+        <div class="container mt-40">
+            <footer>
+                <div class="row-f">
+                    <div class="col-md-12 mt-4">
+                        <div class="row footer-nav">
+                            <div class="col-md-2 offset-md-1">
+                                <ul>
+                                    <li class="mb-4" style="font-size:18px;">COMPANY</li>
+                                    <li>
+                                        <a href="/Home/company/#profilef">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/privacy">Privacy policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/company/#lagalf">Legal notice</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 offset-md-1">
+                                <ul>
+                                    <li class="mb-4" style="font-size:18px;">SHORTCUTS</li>
+                                    <li>
+                                        <a href="/Home/press/#pressf">Press material</a>
+                                    </li>                       
+                                </ul>
+                            </div>
+                            <div class="col-md-2 offset-md-1">
+                                <ul>
+                                    <li class="mb-4" style="font-size:18px;">USEFUL LINKS</li>
+                                    <li>
+                                        <a href="/Home/support/#windows8_10f">Windows 8/10 and iiyama monitors</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Home/support/#downloadsf">Downloads</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 align-self-end">
+                                <p style="font-size:13px;"> Copyright ©2022 iiyama Corporation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>    
+</body>
+</html>

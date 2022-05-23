@@ -1,0 +1,41 @@
+﻿@model DetailsMonitorViewModel
+
+<div class="print-box">
+    <div id="infobox">
+        <div id="contentbox">
+            <div class="container">
+                <div class="row-f">
+                    <div class="imgbox">
+                        <img src="@Model.DetailsMonitor.Img" alt="@Model.DetailsMonitor.Name" width="300" height="240" border="0" style="opacity:1; z-index:0;" />
+                    </div>  
+                    <div class="boxtxt">
+                        <h3>@Model.DetailsMonitor.Name</h3>
+                        <p>
+                            <strong>
+                                @Model.DetailsMonitor.ShortDesc
+                            </strong>
+                        </p>
+                        <p>@Model.DetailsMonitor.LongDesc</p>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container shopbox">
+        <div class="print-btn-box">
+            <a href="javascript:window.print()" title="Print page">
+                <span class="icon-print-btn" style="background:url('/img/ico/btn-print.png') center center no-repeat"></span>
+            </a> 
+        </div>
+        <div class="shopbuttons">
+        <p class="pricetext">
+            @Model.DetailsMonitor.Price.ToString("c")
+        </p>
+        <span><a class="btn btn-primary custom-btn-primary" onclick="javascript:history.back(-1); return false;">Back</a></span>
+        <span><a class="btn btn-primary custom-btn-primary" asp-controller="ShopCart" asp-action="AddCart" asp-route-id="@Model.DetailsMonitor.Id">Add to cart</a></span>        
+        </div>
+    </div>
+</div>
+
+
+

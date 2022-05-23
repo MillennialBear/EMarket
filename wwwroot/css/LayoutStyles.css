@@ -1,0 +1,72 @@
+﻿
+/*Навигация и поиск*/
+.navbar-brand {
+    float: left;
+    height: 60px;
+    padding: 17px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.dropdown-item:hover {
+    color: #2fb7f3;
+}
+
+.search-form-box {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.navbar-brand {
+    float: left;
+    height: 60px;
+    padding: 17px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+/*Футер*/
+.bg-footer {
+    background: #efefef !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.footer-nav ul {
+    font-family: KlavikaLight-OSF;
+    color: #212529;
+    list-style: none;
+}
+
+.footer-nav li {
+    font-family: KlavikaLight-OSF;
+    color: #212529;
+    font-size: 15px;
+}
+
+.footer-nav p {
+    color: #212529;
+    font-family: KlavikaLight-OSF;
+}
+
+.footer-nav li a {
+    font-family: KlavikaLight-OSF;
+    color: #212529;
+    text-decoration: none;}
+
+.footer-nav li a:hover {
+    color: #2fb7f3; 
+}
+
+@media screen and (max-width: 992px) {
+    .bg-footer {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .bg-footer {
+        text-align: center;
+    }
+}

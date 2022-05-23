@@ -1,0 +1,171 @@
+﻿
+/*Страница с мониторами*/
+.route {
+    margin-bottom:50px;
+}
+
+.plug-new {
+    margin-top: -6px;
+    font-family: Kelson;
+}
+
+.container.maxwidth {
+    width: 100%;
+    max-width: 2560px;
+}
+
+.plug-new .products-list-container {
+    display: flex;
+    padding-top: 30px;
+}
+
+.plug-new .products-list-container .aside {       
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    padding-right: 40px;
+    padding-left: 10px;
+    width: 200px;
+}
+
+.plug-new .products-list-container .aside h1 {
+    margin-bottom: 8px;
+    margin-top: 20px;
+    color: #2fb7f3;
+    font-family: KlavikaCH-MediumCondensed;    
+    font-size: 22px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.plug-new .products-list-container .aside h3 {        
+    margin-bottom: 8px;
+    margin-top: 20px;
+    color: #2fb7f3;
+    font-family: KlavikaLight-OSF;
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.checkbox {
+    font-family: KlavikaLight-OSF;
+}
+
+.sort-list {
+    font-family: KlavikaLight-OSF;
+}
+
+.plug-new .products-list-container .content {
+    flex-grow: 1;
+}
+
+.plug-new .products-list-container .content .top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input select {
+    padding: 5px 10px;
+    border: 1px solid #d3dadd;
+    border-radius: 2px;
+    font-size: 13px;
+    color: #2fb7f3;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+.plug-new .products-list-container .content .product-list .product-info {
+    float: left;
+    position: relative;    
+    width: 33.3333%;
+    text-align: center;
+}
+
+.plug-new .products-list-container .content .product-list .product-info > a {
+    display: block;
+    position: relative;
+    padding: 50px 20px 20px 20px;
+}
+
+.plug-new .products-list-container .content .product-list .product-info .content-image {
+    padding-top: 50%;
+    position: relative;
+}
+
+.plug-new .products-list-container .content .product-list .product-info > a > span {
+    display: block;
+}
+
+.plug-new .products-list-container .content .product-list .product-info .short {
+    margin: 24px auto 0 auto;
+    color: #758592;
+    width: 100%;
+    max-width: 220px;
+    font-family: KlavikaLight-OSF;
+    font-size: 14px;
+    line-height: 17px;
+    height: 34px;
+    overflow: hidden;
+}
+
+.plug-new .products-list-container .content .product-list .product-info .name {
+    margin-top: 10px;
+    color: #42515d;
+    font-family: KlavikaCH-MediumCondensed;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.plug-new .products-list-container .content .product-list .product-info .price {
+    margin-top: 10px;
+    font-family: NotoSans-Regular;
+    color: #42515d;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.product-list-header {
+    position: relative;
+    text-align: center;
+    padding: 75px 0;
+}
+
+.plug-new .products-list-container .content .product-list .product-info .content-image img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+#stringResultSearch {
+    text-align: center;
+    font-family: KlavikaLight-OSF;
+    color: #2fb7f3;
+}
+
+#notFoundResult {
+    font-family: KlavikaLight-OSF;
+    color: #2fb7f3;
+}
+
+#stringResultFilters {
+    text-align: center;
+    font-family: KlavikaLight-OSF;
+    color: #2fb7f3;
+}
+
+@media (max-width: 1199px) {
+    .plug-new .products-list-container .content .product-list .product-info {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .plug-new .products-list-container .content .product-list .product-info {
+        width: 100%;
+    }
+}

@@ -1,0 +1,106 @@
+﻿@model EMarket.PaginatedList<EMarket.Data.Models.Order>
+
+@{
+    ViewData["Title"] = "IndexOrder";
+}
+<div class="database-box">
+    <h2 style="text-align:center;">Order database</h2>
+    <p style="padding-left:20px;">        
+        <a asp-area="Admin" asp-controller="Home" asp-action="AdminIndex" class="btn btn-primary">Back to panel menu</a>
+    </p>
+    <form asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" method="get" style="padding-left:20px;">
+        <div class="form-actions no-color">
+            <p>
+                Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-default" /> |
+                <a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder">Back to Full List</a>
+            </p>
+        </div>
+    </form>
+    @{
+        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    }
+    <div>
+        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+    <div class="col-sm-12 database-table-wrap">
+        <table class="table database-table" border="1" width="100%">
+            <thead>
+            <tr>
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["IdSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">ID</a></th>
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a></th>
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["SurnameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Surname</a></th>
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["AddressSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Address</a></th>
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["PhoneSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Phone</a></th>             
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["EmailSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Email</a></th>
+                <th><a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" asp-route-sortOrder="@ViewData["TimeCreatedSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">TimeCreated</a></th>                
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.Name)
+                        </td>                        
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.Surname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.Address)
+                        </td>                   
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.Phone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelOrder => order.TimeCreated)
+                        </td>                        
+                    </tr>
+                    <tr> 
+                        <td colspan="6" style="text-align:left">
+                        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="EditOrder" asp-route-id="@order.Id" class="btn btn-primary btn-sm">Edit</a>
+                        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="DetailsOrder" asp-route-id="@order.Id" class="btn btn-primary btn-sm">Details</a>
+                        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="DeleteOrder" asp-route-id="@order.Id" class="btn btn-danger btn-sm">Delete</a>  
+                        </td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+    </div>  
+    <div>
+        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+</div>
+

@@ -1,0 +1,28 @@
+﻿/*страница для прессы*/
+
+.press-box {
+    margin-bottom: 30px;
+}
+
+.press-table {
+    font-family: KlavikaLight-OSF;
+}
+
+.press-table table { 
+    float: none;
+    width: 610px;
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;    
+    clear: both;
+}
+
+.press-table table td {  
+    width: 50%;
+    border: none;
+    font-size: 0.929em;
+}
+
+.press-table table tr:nth-child(odd) {
+    background-color: #efefef;
+}

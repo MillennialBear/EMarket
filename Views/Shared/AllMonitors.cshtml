@@ -1,0 +1,14 @@
+﻿@model Monitor
+
+<div class="product-info cat-12" style="display:block;">
+    <a asp-controller="DetailsMonitor" asp-action="OpenInfo" asp-route-id="@Model.Id">
+        <span class="content-image">
+            <img class="img" src="@Model.Img" alt="@Model.Name" width="166" height="140" border="0" style="opacity:1; z-index:0;" />
+        </span>
+        <span class="short">@Model.ShortDesc</span>
+        <span class="name">@Model.Name</span>
+        <span class="price">@Model.Price.ToString("c")</span>
+    </a>
+    <span><a class="btn btn-primary custom-btn-primary" asp-controller="ShopCart" asp-action="AddCart" asp-route-id="@Model.Id">Add to cart</a></span>
+    <span><a class="btn btn-primary custom-btn-primary" asp-controller="DetailsMonitor" asp-action="OpenInfo" asp-route-id="@Model.Id">More info</a></span>    
+</div>

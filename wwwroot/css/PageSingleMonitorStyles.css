@@ -1,0 +1,107 @@
+﻿
+/*страница отдельного монитора*/
+#infobox {
+    width: 100%;
+    position: relative;
+}
+
+#contentbox {
+    padding: 25px 0 0 0;
+}
+
+@media screen and (min-width: 992px) {
+    #infobox #contentbox .imgbox {
+        display: inline-block;
+        width: 33%;
+    }
+}
+
+#infobox #contentbox .imgbox {
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    padding: 20px 20px 20px 0;
+    float: left;
+}
+
+#infobox #contentbox .imgbox img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 992px) {
+    #infobox #contentbox .boxtxt {
+        display: inline-block;
+        width: 66%;
+        padding-left: 15px;
+    }
+}
+
+#infobox #contentbox .boxtxt {
+    display: block;
+    vertical-align: middle;
+    padding: 20px 0;
+    float: left;
+}
+
+#infobox #contentbox .boxtxt h3 {    
+    margin: 0px;
+    padding: 0px;
+    font-family: KlavikaCH-MediumCondensed;
+    color: #1F7FB9;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#infobox #contentbox .boxtxt p {
+    margin: 15px 0;
+    text-align: justify;
+    font-family: KlavikaLight-OSF;    
+}
+
+#infobox #contentbox .boxtxt p strong {
+    display: block;
+    margin: 15px 0;
+    font-style: italic !important;
+    font-family: KlavikaLight-OSF;    
+    font-size: 14px;
+}
+
+.pricetext {
+    display: block;
+    margin: 15px 0;
+    font-family: NotoSans-Regular;
+    font-size: 20px;
+    text-align: right;
+}
+
+.shopbox {
+    height: 140px;
+    margin-bottom: 20px;
+}
+
+.print-btn-box {
+    float: left;
+    margin-top: 20px;
+}
+
+.icon-print-btn {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: scale(.7);
+    transition: all .3s ease;
+}
+
+.icon-print-btn:hover {
+    transform: scale(.8);
+    transition: all .3s ease;
+}
+
+.shopbuttons {
+    float: right;
+    padding: 20px;
+    background-color: #efefef;
+    text-align: center;
+}

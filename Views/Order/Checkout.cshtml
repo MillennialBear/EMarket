@@ -1,0 +1,47 @@
+﻿@model Order
+
+<div class="container">
+	<div class="row mb-5 mt-2 orderform" >
+		<h3>Order form:</h3>
+		<form asp-action="Checkout" method="post" class="form-horizontal">
+			<div class="form-group">
+				<label asp-for="Name"></label>
+				<div class="col-12">
+					<input asp-for="Name" class="form-control" />
+					<span asp-validation-for="Name" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="Surname"></label>
+				<div class="col-12">
+					<input asp-for="Surname" class="form-control" />
+					<span asp-validation-for="Surname" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="Address"></label>
+				<div class="col-12">
+					<input asp-for="Address" class="form-control" />
+					<span asp-validation-for="Address" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="Phone"></label>
+				<div class="col-12">
+					<input asp-for="Phone" class="form-control" />
+					<span asp-validation-for="Phone" class="text-danger"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label asp-for="Email"></label>
+				<div class="col-12">
+					<input asp-for="Email" class="form-control" />
+					<span asp-validation-for="Email" class="text-danger"></span>
+				</div>
+			</div>
+			<br />
+			<input class="btn btn-success custom-btn-success" type="submit" value="Make an order" />
+			<a class="btn btn-primary custom-btn-primary" asp-controller="ShopCart" asp-action="Index" asp-route-area="">Back to cart</a>
+		</form>
+	</div>
+</div>

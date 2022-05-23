@@ -1,0 +1,126 @@
+﻿@model EMarket.PaginatedList<EMarket.Data.Models.Monitor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="database-box">
+    <h2 style="text-align:center;">Order database</h2>
+    <p style="padding-left:20px;">
+        <a asp-area="Admin" asp-controller="Management" asp-action="Create" class="btn btn-primary">Add new product</a>
+        <a asp-area="Admin" asp-controller="Home" asp-action="AdminIndex" class="btn btn-primary">Back to panel menu</a>
+    </p>
+    <form asp-area="Admin" asp-controller="Management" asp-action="Index" method="get" style="padding-left:20px;">
+        <div class="form-actions no-color">
+            <p>
+                Find by name: <input type="text" name="SearchString" value="@ViewData["CurrentFilter"]" />
+                <input type="submit" value="Search" class="btn btn-default" /> |
+                <a asp-area="Admin" asp-controller="Management" asp-action="Index">Back to Full List</a>
+            </p>
+        </div>
+    </form>
+    @{
+        var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+        var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+    }
+    <div>
+        <a asp-area="Admin" asp-controller="Management" asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-area="Admin" asp-controller="Management" asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+    <div class="col-sm-12 database-table-wrap">
+        <table class="table database-table" border="1" width="100%">
+            <thead>
+            <tr>
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">ID</a></th>
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["CategoryIdSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Cate-<br />goryId</a></th>
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["CategorySortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Category</a></th>
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Name</a></th>
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["DiagonalSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Diagonal</a></th>             
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["PriceSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Price</a></th>
+                <th><a asp-area="Admin" asp-controller="Management" asp-action="Index" asp-route-sortOrder="@ViewData["ColorSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Color</a></th>
+                <th>Favorite</th>
+                <th>Avalible</th>
+                <th>Short description</th>
+                <th>Long description</th>
+                <th>Img</th>
+            </tr>
+            </thead>
+            <tbody>
+                @foreach (var monitor in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.CategoryId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Category.CategoryName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Diagonal)
+                        </td>                   
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Color)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.IsFavourite)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Avalible)
+                        </td>
+                         <td>
+                            @Html.DisplayFor(modelMonitor => monitor.ShortDesc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.LongDesc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelMonitor => monitor.Img)
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td colspan="11" style="text-align:left">
+                        <a asp-area="Admin" asp-controller="Management" asp-action="Edit" asp-route-id="@monitor.Id" class="btn btn-primary">Edit</a>
+                        <a asp-area="Admin" asp-controller="Management" asp-action="Details" asp-route-id="@monitor.Id" class="btn btn-primary">Details</a>
+                        <a asp-area="Admin" asp-controller="Management" asp-action="Delete" asp-route-id="@monitor.Id" class="btn btn-danger">Delete</a>  
+                        </td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+    </div>  
+    <div>
+        <a asp-area="Admin" asp-controller="Management" asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-area="Admin" asp-controller="Management" asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-pageNumber="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>
+</div>

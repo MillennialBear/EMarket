@@ -1,0 +1,78 @@
+﻿@model Monitor
+
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="add-product">
+    <h1 style="text-align:center;">Create new product</h1>
+    <h4 style="margin-left:30px;">Product data:</h4>
+    <hr />
+    <div class="row" style="margin-left:30px;">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="CategoryId" class="control-label"></label>
+                    <input asp-for="CategoryId" class="form-control" />
+                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Category" class="control-label"></label>
+                    <input asp-for="Category" class="form-control" />
+                    <span asp-validation-for="Category" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+			    <div class="form-group">
+                    <label asp-for="Diagonal" class="control-label"></label>
+                    <input asp-for="Diagonal" class="form-control" />
+                    <span asp-validation-for="Diagonal" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ShortDesc" class="control-label"></label>
+                    <input asp-for="ShortDesc" class="form-control" />
+                    <span asp-validation-for="ShortDesc" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LongDesc" class="control-label"></label>
+                    <input asp-for="LongDesc" class="form-control" />
+                    <span asp-validation-for="LongDesc" class="text-danger"></span>
+                </div>
+			    <div class="form-group">
+                    <label asp-for="Img" class="control-label"></label>
+                    <input asp-for="Img" class="form-control" />
+                    <span asp-validation-for="Img" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Color" class="control-label"></label>
+                    <input asp-for="Color" class="form-control" />
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div><br />                
+                <div class="form-group">
+                    <label asp-for="IsFavourite" class="control-label"></label>
+                    @Html.CheckBoxFor(model => model.IsFavourite)                    
+                    <span asp-validation-for="IsFavourite" class="text-danger"></span>
+                </div><br />
+			    <div class="form-group">
+                    <label asp-for="Avalible" class="control-label"></label> 
+                    @Html.CheckBoxFor(model => model.Avalible)                    
+                    <span asp-validation-for="Avalible" class="text-danger"></span>
+                </div><br />            
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-area="Admin" asp-controller="Management" asp-action="Index" class="btn btn-primary">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,357 @@
+﻿/*Карусель*/
+.fav-bg {
+    position: absolute;
+    left: 50%;
+    max-width: none !important;
+    min-height: 400px;
+    min-width: 100%;
+    top: 200px;
+    transform: translate(-50%,-50%);
+}
+
+.fav-info {
+    position: relative;
+    margin: 20px 25% 0px 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.fav-img {
+    border: 0;
+    opacity: 1;
+    z-index: 0;
+    max-width: none !important;
+    width: 166px;
+    height: 140px;
+}
+
+.fav-info > a > span {
+    display: block;
+}
+
+.fav-info > a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.fav-short {
+    font-family: KlavikaLight-OSF;
+    font-size: 17px;
+}
+
+.fav-name {
+    font-family: KlavikaCH-MediumCondensed;
+    font-size: 15px;
+}
+
+/*Категории на домашней странице*/
+.category-home-box {
+    margin-bottom: 70px;
+}
+
+.orange-mod {
+    background-color: rgba(238, 114, 25, 0.8);
+}
+
+.blue-mod {
+    background-color: rgba(0, 102, 179, 0.8);
+}
+
+.grey-mod {
+    background-color: rgba(162, 162, 162, 0.8);
+}
+
+.dark-mod {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.background-layer-1 {
+    background-image: url('/img/nav_img/desktop.jpg');
+    max-width: 100%;
+    height: 100%;
+}
+
+.background-layer-2 {
+    background-image: url('/img/nav_img/touchscreen.jpg');
+    max-width: 100%;
+    height: 100%;
+}
+
+.background-layer-3 {
+    background-image: url('/img/nav_img/lfd.jpg');
+    max-width: 100%;
+    height: 100%;
+}
+
+.background-layer-4 {
+    background-image: url('/img/nav_img/gaming.jpg');
+    max-width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .category-home-box {
+        margin-bottom: 0;
+    }
+}
+
+.bg-cover {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.home-box-item {
+    position: relative;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 200px;
+    margin-bottom: 0px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 55%;
+    transition: .5s ease;
+}
+
+.col-overlay:hover .overlay {
+    height: 100%;
+}
+
+.text-home-box {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 30px 0 0 0;
+    width: 100%;
+    font-family: NotoSans-Regular;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 13px;
+    transform: translate(0, -50%);
+}
+
+.icon-bg {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -30px;
+    width: 60px;
+    height: 60px;
+}
+
+.bg-contain {
+    -webkit-background-size: contain !important;
+    background-size: contain !important;
+}
+
+/*Блок с соцсетями и поддержкой*/
+.support-home-box {
+    margin-bottom: 50px;
+}
+
+.support-home-box .item span.txt {
+    font-family: KlavikaLight-OSF;
+    text-transform: uppercase;
+    font-size: 75%;
+}
+
+.support-icons {
+    padding: 30px 0;
+    height: auto !important;
+    text-align: center;
+    background-color: #efefef;
+}
+
+.support-icons a {
+    margin: 0 15px;
+}
+
+.support-icons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 27px;
+}
+
+.support-icons .icon {
+    display: block;
+    height: 80%;
+    background-size: contain !important;
+    margin-top: 3px;
+}
+
+.s-bg .item {
+    position: relative;
+}
+
+.s-bg .txt {
+    position: absolute;
+    width: 100%;
+    display: block;
+    font-size: 13px;
+    color: #868686;
+}
+
+.s-bg a:hover span {
+    color: #2fb7f3;
+}
+
+.support-text {
+    font-family: KlavikaLight-OSF;
+    padding: 30px;
+    text-align: center;
+    background-color: #efefef;
+}
+
+.support-text h3 {
+    margin-top: 0;
+    font-family: KlavikaLight-OSF;
+    font-size: 18px;    
+    color: #4d4d4d;
+    text-transform: uppercase;
+}
+
+.support-text p {    
+    margin-top: 0;
+    font-family: KlavikaLight-OSF;
+    color: #868686;
+}
+
+#link-support-page {
+    padding: 0;
+    margin: 0;
+}
+
+#link-support-page:hover h3 {
+    color: #2fb7f3;
+}
+
+#link-support-page:hover p {
+    color: #2fb7f3;
+}
+
+.social-fb-area {
+    background-color: #3b5997;    
+}
+
+.social-tweeter-area {
+    background-color: #01b3e0;    
+}
+
+.social-yt-area {
+    background-color: #FF0000;    
+}
+
+.icon-logo {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -33px 0 0 -33px;
+    width: 66px;
+    height: 66px;
+    transform: scale(.7);
+    transition: all .3s ease;    
+}
+
+.icon-logo:hover, .icon-logo-yt:hover {
+    transform: scale(.8);
+    transition: all .3s ease;
+}
+
+.icon-logo-yt {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -60px 0 0 -60px;
+    width: 120px;
+    height: 120px;
+    transform: scale(.7);
+    transition: all .3s ease;    
+}
+
+.social-fb-area, .social-tweeter-area, .social-yt-area, .support-text, .support-icons {    
+    position: relative;
+}
+
+@media screen and (max-width:768px) {
+    .support-home-box {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .support-icons {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .support-text {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .social-fb-area {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .social-tweeter-area {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .social-yt-area {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .icon-logo-yt {
+        display: block;
+        position: initial;
+        top: 50%;
+        left: 50%;
+        margin: initial;
+        width: initial;
+        height: 120px;
+        transform: scale(.7);
+        transition: all .3s ease;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .icon-logo {
+        display: block;
+        position: initial;
+        top: 50%;
+        left: 50%;
+        margin: initial;
+        width: initial;
+        height: 66px;
+        transform: scale(.7);
+        transition: all .3s ease;
+    }
+}
+
+@media (max-width: 767px) {
+    .hidden-xs {
+        display: none !important;
+    }
+}

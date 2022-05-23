@@ -1,0 +1,13 @@
+﻿@model Monitor
+
+<div class="fav-info cat-12" style="display:block;">
+    <a asp-controller="DetailsMonitor" asp-action="OpenInfo" asp-route-id="@Model.Id">
+        <span class="fav-image">
+            <img class="fav-img" src="@Model.Img" alt="@Model.Name" />
+        </span>
+        <span class="fav-short">@Model.ShortDesc</span>
+        <span class="fav-name">@Model.Name</span>
+        <span class="fav-price">@Model.Price.ToString("c")</span>
+    </a>     
+</div>
+

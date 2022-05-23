@@ -1,0 +1,95 @@
+﻿@model MonitorsListViewModel
+	 
+<script>
+        const ids = ['ddList','Categories_0__CheckboxAnswer','Categories_1__CheckboxAnswer',
+        'Categories_2__CheckboxAnswer','Categories_3__CheckboxAnswer','DiagonalFilters_0__CheckboxAnswer',
+        'DiagonalFilters_1__CheckboxAnswer','DiagonalFilters_2__CheckboxAnswer','DiagonalFilters_3__CheckboxAnswer',
+        'ColorFilters_0__CheckboxAnswer','ColorFilters_1__CheckboxAnswer'];
+        $(document).ready(function(){
+            ids.forEach(function(id){
+                $('#' + id).on('change', function() {
+                    document.forms["form1"].submit();
+                });
+            });
+        });
+</script>
+<div class="route">
+    <form asp-controller="Monitors" asp-action="List" name="form1" method="post" role="form">
+        <fieldset class="form-group">
+            <div class="plug-new select-category">                
+                <div class="container maxwidth">
+                    <div class="products-list-container">
+                        <div class="aside">
+                            <h1>Filters</h1>
+                            <legend class="col-sm-3 control-label"></legend>
+                            <div class="checkbox chekboxlist col-sm-9">
+                                <h3>Categories</h3>
+                                @{
+                                    for (var i = 0; i < Model.Categories.Count(); i++)
+                                    {
+                                        <input asp-for="@Model.Categories[i].CheckboxAnswer" type="checkbox" />
+                                        <label asp-for="@Model.Categories[i].Id"> @Model.Categories[i].CategoryName </label>
+                                        <input asp-for="@Model.Categories[i].Id" type="hidden" /> 
+                                        <input asp-for="@Model.Categories[i].CategoryName" type="hidden" /> 
+                                        <br />
+                                    }
+                                }
+                                <br />
+                                <h3>Diagonal</h3>
+                                @{
+                                    for (var i = 0; i < Model.DiagonalFilters.Count(); i++)
+                                    {
+                                        <input asp-for="@Model.DiagonalFilters[i].CheckboxAnswer" type="checkbox" />
+                                        <label asp-for="@Model.DiagonalFilters[i].Id"> @Model.DiagonalFilters[i].NameFilter </label>
+                                        <input asp-for="@Model.DiagonalFilters[i].Id" type="hidden" /> 
+                                        <input asp-for="@Model.DiagonalFilters[i].NameFilter" type="hidden" />
+                                        <input asp-for="@Model.DiagonalFilters[i].FilterDiagonal" type="hidden" /> 
+                                        <br />
+                                    }
+                                }
+                                <br />
+                                <h3>Color</h3>
+                                @{
+                                    for (var i = 0; i < Model.ColorFilters.Count(); i++)
+                                    {
+                                        <input asp-for="@Model.ColorFilters[i].CheckboxAnswer" type="checkbox" />
+                                        <label asp-for="@Model.ColorFilters[i].Id"> @Model.ColorFilters[i].NameFilter </label>
+                                        <input asp-for="@Model.ColorFilters[i].Id" type="hidden" /> 
+                                        <input asp-for="@Model.ColorFilters[i].NameFilter" type="hidden" />
+                                        <input asp-for="@Model.ColorFilters[i].FilterColor" type="hidden" /> 
+                                        <br />
+                                    }
+                                }
+                            </div>                            
+                        </div>
+                        <div class="content">
+                            <div class="top">
+                                <div class="input">
+                                    @Html.DropDownListFor(m=>m.Dropdown.Value, new List<SelectListItem>
+                                        {
+                                            new SelectListItem{ Text="Popular", Value = "IsFavourite_desc", Selected = true },
+                                            new SelectListItem{ Text="Price ascending", Value = "Price" },
+                                            new SelectListItem{ Text="Price descending", Value = "Price_desc" }
+                                        }, new { @id="ddList", @class="sort-list" })
+                                </div>
+                            </div>
+                            <h3 id="stringResultSearch">@ViewBag.ResultSearch</h3>
+                            <h3 id="stringResultFilters">@ViewBag.ResultFilters</h3>
+                            <div class="product-list" id="listitems">
+                                <h2 id="notFoundResult">@ViewBag.NotFoundResultSearch</h2>
+                                <div class="row mt-2 mb-2">
+                                    @{
+                                        foreach (Monitor monitor in Model.AllMonitors)
+                                        {
+                                            @Html.Partial("AllMonitors", monitor)
+                                        }
+                                     }
+                                </div>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>
+            </div>            
+        </fieldset>
+    </form>
+</div>

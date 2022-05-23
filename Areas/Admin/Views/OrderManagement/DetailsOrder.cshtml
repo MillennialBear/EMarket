@@ -1,0 +1,108 @@
+﻿@model DetailsOrderViewModel
+
+@{
+    ViewData["Title"] = "DetailOrder";
+}
+<div class="container">
+    <div class="detail-order-box">
+        <h1 style="text-align:center;">Order detail</h1>    
+        <div>
+            <h4 style="text-align:left;">Order N: @Html.DisplayFor(modelItem => modelItem.Order.Id)</h4>
+            <hr />
+            <dl class="row">
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.Id)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.Id)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.Name)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.Name)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.Surname)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.Surname)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.Address)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.Address)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.Phone)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.Phone)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.Email)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.Email)
+                </dd>
+                <dt class = "col-sm-2">
+                    @Html.DisplayNameFor(model => model.Order.TimeCreated)
+                </dt>
+                <dd class = "col-sm-10">
+                    @Html.DisplayFor(model => model.Order.TimeCreated)
+                </dd>                   
+            </dl>
+        </div>
+    </div>
+    <div class="order-table-box">
+        <div class="order-table-wrap">
+            <table class="order-table">   
+                <tbody>
+                    <tr>
+                        <th>MonitorID</th>
+                        <th>Monitor</th>
+                        <th>Unit price</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                    </tr>
+                    @foreach (var item in Model.DetailsOrderList)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MonitorID)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Monitor.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UnitPrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Amount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr class="order-table-tfoot">
+                        <td colspan="4">Total price: </td>
+                        <td>@Model.TotalPrice.ToString("c")</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="details-buttons">
+            <div>
+                <a asp-area="Admin" asp-controller="OrderManagement" asp-action="EditOrder" asp-route-id="@Model.Order.Id" class="btn btn-primary">Edit</a>            
+                <a asp-area="Admin" asp-controller="OrderManagement" asp-action="IndexOrder" class="btn btn-primary">Back to List</a>
+                <a asp-area="Admin" asp-controller="OrderManagement" asp-action="DeleteOrder" asp-route-id="@Model.Order.Id" class="btn btn-danger">Delete</a>
+            </div>
+        </div>    
+    </div>
+</div>
+
+

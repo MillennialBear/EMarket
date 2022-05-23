@@ -1,0 +1,136 @@
+﻿
+/*Страница поддержки*/
+#iibdcont {
+    padding-top: 35px;
+}
+
+#iicolleft {    
+    background: #ffffff;
+    font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.077em;
+}
+
+#iicolleft .fxd {
+    position: sticky;
+    top: 80px;
+    padding-right: 12px;
+    z-index: 9;
+}
+
+#iicolleft ul li a {    
+    display: block;
+    padding: 5px;
+    padding-top: 10px;
+    color: #3d474e;
+    font-family: KlavikaLight-OSF;
+}
+
+#iicolleft ul li a:hover {    
+    color: #2fb7f3
+}
+
+#iicolleft ul li a.level-1 {
+    padding-left: 1em;
+    color: #a9becb;
+}
+
+#iicolleft ul li a.level-1:hover {    
+    color: #0E88BE;
+}
+
+#iicolleft ul {
+    list-style: none;
+}
+
+#iiscont 
+#iibdcont
+#iicolright {
+    padding-bottom: 40px;
+}
+
+#iitextbox h1,
+#iicolright h1 {
+    margin: 40px auto;
+    margin-top: 55px;
+    text-align: center;
+    font-family: "Roboto Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.231em;
+    color: #1593cc;
+    text-transform: uppercase;
+}
+
+#iitextbox h3, #iicolright h3 {
+    margin: 25px 0;
+    margin-top: 55px;
+    font-weight: 300;
+    font-size: 1.231em;
+    color: #000;
+    font-family: KlavikaLight-OSF;
+    text-transform: uppercase;
+}
+
+#iitextbox p, #iicolright p {
+    margin: 25px 0;
+    text-align: justify;
+    font-family: KlavikaLight-OSF;
+    font-size: 0.929em;
+}
+
+#iitextbox p strong, #iicolright p strong {
+    font-family: KlavikaLight-OSF;
+    font-weight: 700;
+}
+
+.warranty-table {
+    font-family: KlavikaLight-OSF;
+}
+
+.warranty-table table { 
+    float: none;
+    width: 610px;
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    border-spacing: 0;    
+    clear: both;
+}
+
+.warranty-table table td {        
+    border: 1px solid #000000;
+    font-size: 0.929em;
+}
+
+.warranty-table table tr:nth-child(even) {
+    background-color: #efefef;
+}
+
+.country-table {
+    width: 560px;
+    font-family: KlavikaLight-OSF;
+    border: 0;
+}
+
+.country-table table td {
+    width: 30%;
+}
+
+.country-table table tr:nth-child(odd) {
+    background-color: #bad2f1;
+}
+
+.faq-list {
+    font-family: KlavikaLight-OSF;
+}
+
+.faq-list ul {
+    color: #2fb7f3;
+    list-style: none;
+}
+
+.faq-list li {
+    cursor: pointer;
+}
+
+.faq-list p {
+    color: #000000;
+}

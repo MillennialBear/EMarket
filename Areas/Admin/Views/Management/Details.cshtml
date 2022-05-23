@@ -1,0 +1,70 @@
+﻿@model DetailsMonitorViewModel
+
+<div class="details-product-box">
+    <div class="col-sm-2">
+        <h4 style="text-align:center;">@Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Name)</h4>
+    </div>
+    <div class="col-md-12 details-table-wrap">
+        <table class="table details-table">
+            <tr>
+                <th>MonitorID</th>
+                <th>CategoryID</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Diagonal</th>            
+                <th>Short description</th>
+                <th>Long description</th>
+                <th>Img</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Favourite</th>
+                <th>Avalible</th>
+            </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.Category.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Diagonal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.ShortDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.LongDesc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Img)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.IsFavourite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.DetailsMonitor.Avalible)
+                </td>
+            </tr>
+        </table>
+    </div>    
+    <div class="details-buttons">
+        <div>
+            <a asp-area="Admin" asp-controller="Management" asp-action="Edit" asp-route-id="@Model.DetailsMonitor.Id" class="btn btn-primary">Edit</a>
+            <a asp-area="Admin" asp-controller="Management" asp-action="Delete" asp-route-id="@Model.DetailsMonitor.Id" class="btn btn-primary">Delete</a>
+            <a asp-area="Admin" asp-controller="Management" asp-action="Index" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>    
+</div>
