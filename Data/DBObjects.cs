@@ -23,7 +23,7 @@ namespace EMarket.Data
                         "with edge-to-edge glass. Thanks to a glass overlay covering the screen and a rugged bezel, it guarantees high " +
                         "durability and scratch-resistance, making it perfect for kiosk and high use public facing applications.",
                         Img = "/img/touchscreen/PROLITE TF1015MC-B2.png",
-                        Price = 12000,
+                        Price = 127,
                         Diagonal = 10.1,
                         IsFavourite = true,
                         Avalible = true,
@@ -39,7 +39,7 @@ namespace EMarket.Data
                         "and Screen Rotation allowing you to set the perfect position of the screen ensuring ergonomic posture and optimal " +
                         "viewing comfort.",
                         Img = "/img/desktop/PROLITE B1780SD-W1.png",
-                        Price = 15000,
+                        Price = 210,
                         Diagonal = 17,
                         IsFavourite = false,
                         Avalible = true,
@@ -54,7 +54,7 @@ namespace EMarket.Data
                         LongDesc = "The ProLite E2083HSD is a 19,5’’ LED-backlit monitor with 1600x900 resolution. It features 5msec response " +
                         "time and >5M: 1 Advanced Contrast Ratio assuring vibrant images and blur free Video.",
                         Img = "/img/desktop/PROLITE E2083HSD-B1.png",
-                        Price = 17000,
+                        Price = 200,
                         Diagonal = 19.5,
                         IsFavourite = true,
                         Avalible = true,
@@ -70,7 +70,7 @@ namespace EMarket.Data
                         " to set the perfect position of the screen ensuring ergonomic posture and optimal viewing comfort.The 5ms response time " +
                         "and high contrast make the B1980D ideal for a wide range of business applications.",
                         Img = "/img/desktop/PROLITE B1980D-B1.png",
-                        Price = 18000,
+                        Price = 215,
                         Diagonal = 19,
                         IsFavourite = false,
                         Avalible = true,
@@ -86,7 +86,7 @@ namespace EMarket.Data
                         "technology offers accurate and consistent colour reproduction with wide viewing angles. High contrast and brightness " +
                         "values mean the monitor will provide excellent performance for photographic and web design.",
                         Img = "/img/desktop/PROLITE XU2793HSU-B4.png",
-                        Price = 26000,
+                        Price = 280,
                         Diagonal = 27,
                         IsFavourite = true,
                         Avalible = true,
@@ -104,7 +104,7 @@ namespace EMarket.Data
                         "along with the Black Tuner function gives you total control over the dark " +
                         "scenes and makes sure details are always clearly visible.",
                         Img = "/img/gaming/G-Master G2450HSU-B1.png",
-                        Price = 30000,
+                        Price = 300,
                         Diagonal = 24,
                         IsFavourite = true,
                         Avalible = true,
@@ -122,7 +122,7 @@ namespace EMarket.Data
                         "monitor allows you to make split second decisions and forget about ghosting effects" +
                         " or smearing issues.",
                         Img = "/img/gaming/G-Master G4380UHSU-B1.png",
-                        Price = 49000,
+                        Price = 355,
                         Diagonal = 43,
                         IsFavourite = true,
                         Avalible = true,
@@ -139,7 +139,7 @@ namespace EMarket.Data
                         "guarantees great viewing from all angles, high brightness and exceptional colour " +
                         "clarity. A wide range of video and audio inputs ensures compatibility with multiple platforms.",
                         Img = "/img/lfd/PROLITE LE4340S-B3.png",
-                        Price = 45000,
+                        Price = 320,
                         Diagonal = 43,
                         IsFavourite = true,
                         Avalible = true,

@@ -104,10 +104,13 @@
     background-color: #efefef;
 }
 
-.country-table {
+.country-table table {
+    float: none;
     width: 560px;
+    border-collapse: collapse;
     font-family: KlavikaLight-OSF;
     border: 0;
+    clear: both;
 }
 
 .country-table table td {

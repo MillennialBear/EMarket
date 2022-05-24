@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EMarket.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220523163950_First")]
-    partial class First
+    [Migration("20220524131911_Third")]
+    partial class Third
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -231,7 +231,7 @@ namespace EMarket.Migrations
                         new
                         {
                             Id = "ce25a02e-f066-4bc8-a95c-61cc2deb240a",
-                            ConcurrencyStamp = "0df993f1-b0a9-4a95-8e04-41febeeefb4a",
+                            ConcurrencyStamp = "488a7b5a-dcb6-45fd-9d57-789033f53db2",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -330,13 +330,13 @@ namespace EMarket.Migrations
                         {
                             Id = "4d5c8257-12d7-4df6-81d1-5a389c184879",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8cd80d77-0897-458e-9bd0-3e24d54482f9",
+                            ConcurrencyStamp = "016e1417-14ae-4b07-a5e9-5667e014114e",
                             Email = "my@email.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MY@EMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMO+gFlmVv5c3NiWpnYtSex2AmJgPGIE4hEI/BHoMVF/7JNFJ91X8SQHITuh3wNyRg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKOdF9WNlJfadJUmIwllOM4MjwPAiWX/42IZPc/Ul58vDx0fHSC+SN+sXecog8/oQg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

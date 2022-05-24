@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EMarket.Migrations
 {
-    public partial class First : Migration
+    public partial class Third : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -281,12 +281,12 @@ namespace EMarket.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "ce25a02e-f066-4bc8-a95c-61cc2deb240a", "0df993f1-b0a9-4a95-8e04-41febeeefb4a", "admin", "ADMIN" });
+                values: new object[] { "ce25a02e-f066-4bc8-a95c-61cc2deb240a", "488a7b5a-dcb6-45fd-9d57-789033f53db2", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "4d5c8257-12d7-4df6-81d1-5a389c184879", 0, "8cd80d77-0897-458e-9bd0-3e24d54482f9", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEMO+gFlmVv5c3NiWpnYtSex2AmJgPGIE4hEI/BHoMVF/7JNFJ91X8SQHITuh3wNyRg==", null, false, "", false, "admin" });
+                values: new object[] { "4d5c8257-12d7-4df6-81d1-5a389c184879", 0, "016e1417-14ae-4b07-a5e9-5667e014114e", "my@email.com", true, false, null, "MY@EMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEKOdF9WNlJfadJUmIwllOM4MjwPAiWX/42IZPc/Ul58vDx0fHSC+SN+sXecog8/oQg==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

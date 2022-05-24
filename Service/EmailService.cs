@@ -18,9 +18,9 @@ namespace EMarket.Service
             builder.HtmlBody = string.Format(message.ToString());
             emailMessage.Body = builder.ToMessageBody();
             
-            var format = FormatOptions.Default.Clone();
-            format.NewLineFormat = NewLineFormat.Dos;
-            emailMessage.WriteTo(format, @"EMarketEmail/email.eml");
+            //var format = FormatOptions.Default.Clone();
+            //format.NewLineFormat = NewLineFormat.Dos;
+            //emailMessage.WriteTo(format, @"EMarketEmail/email.eml");
 
             using (var client = new SmtpClient())
             {                
