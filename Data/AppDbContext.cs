@@ -9,7 +9,7 @@ namespace EMarket.Data
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
-
+            //Database.EnsureCreated();
         }
 
         public DbSet<Monitor> Monitor { get; set; }

@@ -1,5 +1,6 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=EMarket; Persist Security Info=false; User ID='sa'; Password='sa'; Trusted_Connection=True; MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=192.168.0.103,1433;Database=EMarketdb;User Id=Admin;Password=word;MultipleActiveResultSets=true"
   }
 }
+//Data Source=DESKTOP-GH1D2K2;Initial Catalog=EMarketdb;User Id=Admin;Password=word;Integrated Security=false;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
