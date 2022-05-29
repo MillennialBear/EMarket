@@ -8,16 +8,16 @@
         Ссылка на гитхаб-репозиторий: https://github.com/MillennialBear/EMarket</p>
 <h3>Сервер разработки</h3>
 <p>Данный проект построен с использованием ядра .NET 5.0.</p>
-<ul>
-    Серверные технологии:
+<p>Серверные технологии:</p>
+<ul>        
     <li>Generic Repository Patterns</li> 
     <li>Entity Framework 6.2.0</li>
     <li>Microsoft SQL Server 2019</li>
 </ul>
 <h3>Сторона клиента</h3>
 <p>Проект был создан с помощью Bootstrap версии 5.1.3.</p>
-<ul>
-    Технологии на стороне клиента:
+<p>Технологии на стороне клиента:</p>
+<ul>    
     <li>Bootstrap 5.1.3</li>
     <li>JQuery 3.6.0</li>
 </ul>
